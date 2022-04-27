@@ -36,7 +36,7 @@ public class MixinWhitelist {
                     for(int i = 0; i < roles.length; i++) {
                         String r = roles[i];
                         for (Role role : m.getRoles()){
-                            if(role.getName().equals(r)) if(i == roles.length-1) return;
+                            if(role.getId().equals(r)) if(i == roles.length-1) return;
                         }
                     }
                     cir.setReturnValue(new StringTextComponent((String) Refl.getLocalizationField().get(Configuration.instance().localization.linking)));
